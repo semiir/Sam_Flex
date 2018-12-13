@@ -1,0 +1,103 @@
+.heading2, h3 {
+
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+    font-family: sans-serif;
+
+}
+
+h3{
+	font-size: 1.5em;
+}
+
+.container {
+    display: flex;
+    flex-flow : wrap column;
+    /*shoerhand for 
+    	flex-wrap: wrap;
+    	flex-direction: column;
+    */
+    /* helps column wrap in height, not in width mind you.*/
+    max-height: 34em;
+    align-content: center;
+}
+
+.item {
+    border: 1px solid #dedede;
+    padding: 2em;
+    margin: .15em;
+    font-size: 3em;
+    text-align: center;
+    background-size: 100% auto !important;
+
+    border-radius: 5px;
+    /*! box-shadow: blanchedalmond; */
+    /*box-shadow: 1px 1px 1px 1px #dedede;*/
+}
+
+/*
+Corrections in paddings shows how flexible the boxes get, once we play with 
+align-content or justify-content elements 
+*/
+.item.item-1 {
+  padding: 2.4em 2em;
+  background: url(images/image-1.png) no-repeat;
+  order: 6;
+
+}
+.item.item-2 {
+  padding: 2em 3em;
+    background: url(images/image-2.png) no-repeat;
+    order: 3;
+}
+.item.item-3 {
+  padding: 2.4em 2.4em;
+    background: url(images/image-3.png) no-repeat;
+    order: 5;
+}
+.item.item-4 {
+  padding: 2.4em 2.5em;
+    background: url(images/image-4.png) no-repeat;
+    order: 2;
+}
+.item.item-5 {
+  padding: 2.4em 2em;
+    background: url(images/image-5.png) no-repeat;
+    order: 1;
+}
+
+.item.item-6 {
+    background: url(images/image-6.png) no-repeat;
+    order: 4;
+    padding: 2.8em 2em;
+}
+
+
+.footer {
+
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+
+}
+
+.excNav {
+}
+.excNav ul {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+}
+.excNav li {
+  border: 1px solid #222;
+  padding: 0.5em 1em;
+  margin: .3em;
+  list-style: none;
+}
+
+.exc1 {
+
+    background-color: #323131;
+    color: #eee;
+    border: 0 none !important;
