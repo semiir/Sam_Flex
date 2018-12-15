@@ -15,12 +15,20 @@ body {
     font-size: 3em;
     text-align: center;
     margin: 0;
-    padding: 20px 0;
+    padding: 20px 0 0 0;
     font-family: fantasy;
 }
 
 h3{
     font-size: 1.5em;
+}
+
+h4{
+  text-transform: uppercase;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0;
+  padding: 5px 0;
 }
 
 .mainbody {
@@ -58,66 +66,88 @@ footer {
 /* Excercise 1 : uneven photo montage */
 
 .container1 {
-    display: flex;
-    flex-flow : wrap column;
-    /*shoerhand for 
-      flex-wrap: wrap;
-      flex-direction: column;
-    */
-    /* helps column wrap in height, not in width mind you.*/
-    max-height: 34em;
+    
+
+    max-width: 800px;
+
     align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+
+
+
+    
+    /* helps column wrap in height, not in width mind you.*/
+    /*max-height: 34em;*/
+    /*align-content: center;*/
+    /*flex-wrap: wrap;*/
 }
 
-.container1 > .item {
-    border: 1px solid #dedede;
+.row1, .row2,.row3 {
+/*    border: 1px solid #dedede;
     padding: 2em;
     margin: .15em;
     font-size: 3em;
     text-align: center;
     background-size: 100% auto !important;
-
     border-radius: 5px;
-    /*! box-shadow: blanchedalmond; */
-    /*box-shadow: 1px 1px 1px 1px #dedede;*/
+    padding: 2em 2em;
+    background-repeat: no repeat;*/
+    
+    display: flex;
+    flex-flow: wrap row;
 
-/*
-Corrections in paddings shows how flexible the boxes get, once we play with 
-align-content or justify-content elements 
-*/
-}
-
-.container1 .item.{
-  padding: 2em 2em;
-  background-repeat: no repeat;
-}
-
-.container1 .item.item-1 {
-  background: url(images/image-1.png);
-  order: 6;
-
-}
-.container1 .item.item-2 {
-    background: url(images/image-2.png);
-    order: 3;
-}
-.container1 .item.item-3 {
-    background: url(images/image-3.png);
-    order: 5;
-}
-.container1 .item.item-4 {
-    background: url(images/image-4.png);
-    order: 2;
-}
-.container1 .item.item-5 {
-    background: url(images/image-5.png);
-    order: 1;
+    /*width: 25%;*/
+    
+    /*
+      Corrections in paddings shows how flexible the boxes get, once we play with 
+      align-content or justify-content elements 
+    */
 }
 
-.container1 .item.item-6 {
-    background: url(images/image-6.png);
-    order: 4;
+.container1  .item{
+    
+/*width: 25%;*/
+    height: 10em;
+    background-position: center center;
+    background-size:cover;
+    background-repeat: no-repeat !important;
 }
+
+.container1 .item:hover{
+    /* To Change to Grayscale on hover */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}
+
+
+.row1 .item:nth-child(1) {flex:2; order:1; background-image: url(images/image-1.png)}
+.row1 .item:nth-child(2) {flex:1; order:3; background-image: url(images/image-2.png)}
+.row1 .item:nth-child(3) {flex:2; order:2; background-image: url(images/image-3.png)}
+.row1 .item:nth-child(4) {flex:1; order:4; background-image: url(images/image-4.png)}
+.row2 .item:nth-child(1) {flex:1; background-image: url(images/image-5.png)}
+.row2 .item:nth-child(2) {flex:2; background-image: url(images/image-6.png)}
+.row2 .item:nth-child(3) {flex:3; background-image: url(images/image-7.png)}
+.row2 .item:nth-child(4) {flex:1; background-image: url(images/image-8.png)}
+.row3 .item:nth-child(1){flex:2; background-image: url(images/image-9.png)}
+.row3 .item:nth-child(2) {flex:1; background-image: url(images/image-10.png)}
+.row3 .item:nth-child(3) {flex:2; background-image: url(images/image-11.png)}
+.row3 .item:nth-child(4) {flex:1; background-image: url(images/image-12.png)}
+
+.row2 .item:nth-child(3), .row3 .item:nth-child(1){
+  background-position: top center;
+}
+
+@media screen and (max-width: 450px)  {
+  .container1 .item{
+    width: 100%;
+    flex: 1 !important;
+    flex-wrap: wrap;
+  }
+
+}
+
 
 /* Navigation Bar */
 
@@ -161,36 +191,48 @@ align-content or justify-content elements
 
 .container2, .container3 {
   width: 100%;
-  max-width: 412px;
-  margin: 20px auto;
+  max-width: 340px;
+  margin: 50px auto;
   background-color: #fff;
-  padding: 10px;
   border-radius: 20px;
+  padding: 10px;
+  box-shadow: 1px 1px 50px #505050;
 }
 
 .container2 .item{
-  border: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
   display: flex;
   flex-direction: row;
-  width: 25em;
-  margin: 5px;
+  width: 20em;
+  margin-bottom: 10px;
+
+padding: 10px;
 }
 
-.item .item_image{
-  flex-shrink: 0;
-  margin: 0.5em 1em;
-}
+.container2 .img1 { background-image: url(images/image-1.png)}
+.container2 .img2 { background-image: url(images/image-2.png)}
+.container2 .img3 { background-image: url(images/image-3.png)}
+.container2 .img4 { background-image: url(images/image-4.png)}
+.container2 .img5 {background-image: url(images/image-5.png)}
+.container2 .img6 {background-image: url(images/image-6.png)}
 
-.item .item_image img{
+.container2 .item_image{
   border-radius: 50%;
-  width: 55px;
   border: 1px solid #bdbcbc;
-  padding: 3px;
+  width: 40px;
+  height: 10em;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat !important;
+  height: 40px;
 }
 
 .item_content {
-  flex-grow: 1;
-  padding: 0 1em;
+padding: 0px 20px;
+}
+
+.container2 .header4 {
+   margin: 0;
 }
 
 
@@ -210,19 +252,22 @@ align-content or justify-content elements
 }
 
 .image3 {
-    flex-shrink: 0;
     padding: 0 15px;
 }
 
 .item3:hover, .item_title:hover, .fas:hover, .activenow {
-    background-color: #b3b3e7;
-    color: #3e49b9;
+  background-color: #daccb8;
+  color: #774a0a;
+}
+
+.item3:hover{
+  background-color: #c0af97;
 }
 
 .imagesingle {
     text-align: center;
     padding-top: 10px;
-    background-color: #c9c0c0;
+    background-color: #e1eade;
     padding-bottom: 10px;
     border-radius: 10px 10px 0 0;
 }
