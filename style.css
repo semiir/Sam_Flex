@@ -1,9 +1,9 @@
 /* General */
 
-body {
+body, html {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .heading2 {
@@ -23,12 +23,12 @@ h3{
     font-size: 1.5em;
 }
 
-h4{
+h4, .content4 h4 {
   text-transform: uppercase;
   font-size: 1.5em;
   text-align: center;
   margin: 0;
-  padding: 5px 0;
+  padding: 15px 0;
 }
 
 .mainbody {
@@ -51,7 +51,7 @@ h4{
 footer {
     max-height: 40px;
     background-color: #fff;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     padding: 10px 0;
@@ -83,7 +83,7 @@ footer {
     /*flex-wrap: wrap;*/
 }
 
-.row1, .row2,.row3 {
+.row1, .row2,.row3, .row4, .row5 {
 /*    border: 1px solid #dedede;
     padding: 2em;
     margin: .15em;
@@ -121,22 +121,32 @@ footer {
     filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
 }
 
+.row1 .item:nth-child(1) {flex:2;  background-image: url(images/animals/image-1.jpg); order:2;}
+.row1 .item:nth-child(2) {flex:1;  background-image: url(images/animals/image-2.jpg); order:3;}
+.row1 .item:nth-child(3) {flex:1;  background-image: url(images/animals/image-3.jpg); order:5;}
+.row1 .item:nth-child(4) {flex:3;  background-image: url(images/animals/image-4.jpg); order:4;}
+.row1 .item:nth-child(5) {flex:2;  background-image: url(images/animals/image-5.jpg); order:1;}
 
-.row1 .item:nth-child(1) {flex:2; order:1; background-image: url(images/image-1.png)}
-.row1 .item:nth-child(2) {flex:1; order:3; background-image: url(images/image-2.png)}
-.row1 .item:nth-child(3) {flex:2; order:2; background-image: url(images/image-3.png)}
-.row1 .item:nth-child(4) {flex:1; order:4; background-image: url(images/image-4.png)}
-.row2 .item:nth-child(1) {flex:1; background-image: url(images/image-5.png)}
-.row2 .item:nth-child(2) {flex:2; background-image: url(images/image-6.png)}
-.row2 .item:nth-child(3) {flex:3; background-image: url(images/image-7.png)}
-.row2 .item:nth-child(4) {flex:1; background-image: url(images/image-8.png)}
-.row3 .item:nth-child(1){flex:2; background-image: url(images/image-9.png)}
-.row3 .item:nth-child(2) {flex:1; background-image: url(images/image-10.png)}
-.row3 .item:nth-child(3) {flex:2; background-image: url(images/image-11.png)}
-.row3 .item:nth-child(4) {flex:1; background-image: url(images/image-12.png)}
+.row2 .item:nth-child(1) {flex:2;  background-image: url(images/animals/image-6.jpg)}
+.row2 .item:nth-child(2) {flex:1;  background-image: url(images/animals/image-7.jpg)}
+.row2 .item:nth-child(3) {flex:2;  background-image: url(images/animals/image-8.jpg)}
+.row2 .item:nth-child(4) {flex:2;  background-image: url(images/animals/image-9.jpg)}
+.row2 .item:nth-child(5) {flex:3;  background-image: url(images/animals/image-10.jpg)}
+
+.row3 .item:nth-child(1) {flex:2;  background-image: url(images/animals/image-11.jpg)}
+.row3 .item:nth-child(2) {flex:1;  background-image: url(images/animals/image-12.jpg); order:5;}
+.row3 .item:nth-child(3) {flex:2;  background-image: url(images/animals/image-13.jpg)}
+.row3 .item:nth-child(4) {flex:1;  background-image: url(images/animals/image-14.jpg)}
+.row3 .item:nth-child(5) {flex:3;  background-image: url(images/animals/image-15.jpg)}
+
+.row4 .item:nth-child(1) {flex:1;  background-image: url(images/animals/image-16.jpg)}
+.row4 .item:nth-child(2) {flex:1;  background-image: url(images/animals/image-17.jpg)}
+.row4 .item:nth-child(3) {flex:3;  background-image: url(images/animals/image-18.jpg)}
+.row4 .item:nth-child(4) {flex:2;  background-image: url(images/animals/image-19.jpg)}
+.row4 .item:nth-child(5) {flex:3;  background-image: url(images/animals/image-20.jpg)}
 
 .row2 .item:nth-child(3), .row3 .item:nth-child(1){
-  background-position: top center;
+  /*background-position: top center;*/
 }
 
 @media screen and (max-width: 450px)  {
@@ -209,12 +219,12 @@ footer {
 padding: 10px;
 }
 
-.container2 .img1 { background-image: url(images/image-1.png)}
-.container2 .img2 { background-image: url(images/image-2.png)}
-.container2 .img3 { background-image: url(images/image-3.png)}
-.container2 .img4 { background-image: url(images/image-4.png)}
-.container2 .img5 {background-image: url(images/image-5.png)}
-.container2 .img6 {background-image: url(images/image-6.png)}
+.container2 .img1 { background-image: url(images/faces/image-1.png)}
+.container2 .img2 { background-image: url(images/faces/image-2.png)}
+.container2 .img3 { background-image: url(images/faces/image-3.png)}
+.container2 .img4 { background-image: url(images/faces/image-4.png)}
+.container2 .img5 { background-image: url(images/faces/image-5.png)}
+.container2 .img6 { background-image: url(images/faces/image-6.png)}
 
 .container2 .item_image{
   border-radius: 50%;
@@ -233,6 +243,8 @@ padding: 0px 20px;
 
 .container2 .header4 {
    margin: 0;
+   padding: 0;
+   text-align: left;
 }
 
 
@@ -283,14 +295,77 @@ padding: 0px 20px;
     color: #2d2d2d;
 }
 
+/* content slider */
 
+.container4 {
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 1px 1px 50px #333;
+}
 
+.container4 .content4 {
+    place-self: center start;
+}
 
+.content4 h4 {
+    text-align: left;
+}
 
+.contImg{
+  width: 280px;
+  height: 280px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 auto;
+}
 
+.contImg.img1 { background-image: url(images/container.png) }
+.contImg.img2 { background-image: url(images/items.png) }
+.contImg.img3 { background-image: url(images/lines.png) }
+.contImg.img4 { background-image: url(images/cells.png) }
+.contImg.img5 { background-image: url(images/areas.png) }
+.contImg.img6 { background-image: url(images/tracks.png) }
 
+.box {
+    display: grid;
+    grid-template-columns: 480px 280px;
+    grid-template-rows: 280px;
+    border-bottom: 1px solid #c0c0c0;
+    padding: 20px 10px;
+    background-color: #f9f9f9;
+}
 
+.box:nth-child(even) {background: #f9f9f9}
+.box:nth-child(odd) {background: #f3f3f3;}
 
+.more p, .more a {
+    color: #555;
+}
+.more p {
+    margin: 10px 5%;
+}
+
+@media screen and (max-width: 450px)  {
+
+  .container4 {
+      max-width: 400px;
+      margin: 20px auto;
+  }
+  .box {
+    grid-template-columns: 360px;
+    grid-template-rows: 130px 269px;
+
+  }
+
+  .container4 .content4 {
+    place-self: center;
+}
+
+.content4 h4 {
+    text-align: center;
+}
+}
 
 
 
